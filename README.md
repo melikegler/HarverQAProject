@@ -7,7 +7,7 @@ Harver QA Exercise
 Ensure that [Node.js](https://nodejs.org/) ([Current or Active LTS](https://github.com/nodejs/Release#release-phases) is recommended, version 12 at minimum) and [npm](https://www.npmjs.com/) are installed on your computer before running it:
 
 ```sh
-$ npm install -g testcafe
+npm install -g testcafe
 ```
 ### Running the Test
 
@@ -16,11 +16,11 @@ Specify the [target browser](https://testcafe.io/documentation/402639/reference/
 and [file path](https://testcafe.io/documentation/402639/reference/command-line-interface#file-pathglob-pattern).
 
 ```sh
-$ testcafe chrome Drag.js
-$ testcafe chrome Dropdown.js,
-$ testcafe chrome FileUpload.js
-$ testcafe chrome IFrame.js
-$ testcafe chrome LoginPage.js
+testcafe chrome Drag.js
+testcafe chrome Dropdown.js,
+testcafe chrome FileUpload.js
+testcafe chrome IFrame.js
+testcafe chrome LoginPage.js
 ```
 
 TestCafe opens the chrome browser and starts executing the test.
