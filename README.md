@@ -1,58 +1,34 @@
 Harver QA Exercise
-========================
 
-This exercise assesses API testing skills.
+## Getting Started
 
-## Background
+### Installation
 
-Harver's new Candidate API has been developed and is almost ready to be released!
-But does it live up to Harver's impeccable quality standards? Your mission is to find out...
+Ensure that [Node.js](https://nodejs.org/) ([Current or Active LTS](https://github.com/nodejs/Release#release-phases) is recommended, version 12 at minimum) and [npm](https://www.npmjs.com/) are installed on your computer before running it:
 
-## Prequisites
+```sh
+$ npm install -g testcafe
+```
+### Running the Test
 
-You'll need **Node.JS** + **NPM** installed to setup and run the server.
+Call the following command in a command shell.
+Specify the [target browser](https://testcafe.io/documentation/402639/reference/command-line-interface#browser-list)
+and [file path](https://testcafe.io/documentation/402639/reference/command-line-interface#file-pathglob-pattern).
 
-## Setup
+```sh
+$ testcafe chrome Drag.js
+$ testcafe chrome Dropdown.js,
+$ testcafe chrome FileUpload.js
+$ testcafe chrome IFrame.js
+$ testcafe chrome LoginPage.js
+```
 
-First time run the following command:
+TestCafe opens the chrome browser and starts executing the test.
 
-`npm ci`
+> Important! Make sure the browser tab that runs tests stays active.
+> Do not minimize the browser window. Inactive tabs and minimized browser windows switch
+> to a lower resource consumption mode where tests are not guaranteed to execute correctly.
 
-To start the server:
+### Viewing the Results
 
-`npm start`
-
-You can now access the API at: [http://localhost:3000](http://localhost:3000)
-
-The API specification (how it should work) is detailed in `api.yml`. You can also view the auto-generated documentation
-at [`docs/api.html`](file:docs/api.html).
-
-## Tasks
-
-### API test assignment
-
-1. Timebox yourself to 1 hour to find as many defects in the API as you can. 
-2. Please share the defects you find in a document or spreadsheet.
-
-### Web UI Automation test assignment
-
-1. Go to https://the-internet.herokuapp.com/
-2. Select any five elements from the list
-3. Automate the selected elements using any JS based end to end testing framework.
- *Tip!* 
- Selenium (https://www.selenium.dev/documentation/)
- TestCafe (https://testcafe.io/documentation/402634/guides)
- Cypress (https://docs.cypress.io/)
-4. Create a project in github and provide us the link
-5. Make sure you have a readme with instructions inside the project on how to run it
-
-Expectation: All the tests should pass
-
-## Notes
-
-* The database is mocked in memory. Restart the server to reset the data.
-* Some of the API endpoints require [Basic Authentication](https://swagger.io/docs/specification/authentication/basic-authentication/).
-  The username is: `tester` and the password is: `iloveqa`.
-* We've included the boilerplate code to write Bat feature files, for your convenience.
-* We would normally encourage static code analysis to help look for bugs, but for the purpose of this
-  exercise, the `server.js` is deliberately obfuscated.
+TestCafe outputs the results into a command shell by default. 
